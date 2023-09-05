@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate method</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+
+
+* {
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+
+body {
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+}
+    
+#boxdiv1 {
+        width:100;
+        height:715px;
+        background-color: #d6a683;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+#longp1 {
+        font-size:40px;
+        color:#fbfbfb;
+        font-family: 'poppins';
+        font-weight: 700;
+        letter-spacing: 5px;
+        position:relative;
+        left:-450px;
+        top:60px;
+    }
+    
+    
+#changingtext1 {
+        font-size:40px;
+        color:#1e3849;
+        font-family: 'poppins';
+        font-weight: 700;
+        letter-spacing: 5px;
+        position:absolute;
+        text-align: left;
+        top:-130px;
+        line-height: 45px;
+    }
+
+    
+#overflowdiv {
+    position:relative;
+    width:850px;
+    height:50px;
+    margin-left:190px;
+    overflow: hidden;    
+    left:-15px;
+    top:2px;
+}
+  
+#span1 {
+    color:#33536b;
+}
+
+#span2 {
+    color:#b67a4b;
+}
+
+#span3 {
+    color:#712921;
+}
+ 
+
+ 
+
+</style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="boxdiv1">
+
+<p id="longp1">LIVE LIFE &nbsp</p>
+
+<div id="overflowdiv">
+
+<p id="changingtext1">
+
+HAPPY<br>
+
+<span id="span1">LOUD</span><br>
+
+<span id="span2">PROUD</span><br>
+
+<span id="span3">FULLY</span></p>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+//$("#").animate({},1000, function(){ $("#").animate({},1000,); });
+
+
+$(document).ready(function(){
+
+$("#changingtext1").animate({top:'-85px'},500, function(){
+
+    $("#changingtext1").animate({top:'-40px'},500, function(){
+        
+        $("#changingtext1").animate({top:'5px'},500, function(){
+            
+            $("#changingtext1").animate({top:'50px'},500, function(){
+                
+                $("#changingtext1").animate({top:'-180px'}, function(){
+
+                    $("#changingtext1").animate({top:'-130px'},200);
+                    
+                } ); });}  );});
+
+});
+
+  });
+
+
+
+</script>
+
+    
+</body>
+</html>
